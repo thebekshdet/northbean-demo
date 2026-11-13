@@ -8,16 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f1ea;--fg:#1f1813;--mut:#6d6058;--ac:#c2602e;--ac2:#8f3f17;--card:#fffdf9;--bd:#e7dccf;--dark:#16110d}
+:root{--bg:#f6f1ea;--fg:#1f1813;--mut:#6d6058;--ac:#7a4a2e;--ac2:#1f1813;--card:#fffdf9;--bd:#e7dccf;--dark:#16110d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font:16px/1.65 Inter,system-ui,sans-serif;background:var(--bg);color:var(--fg)}
 img{max-width:100%;display:block}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.1;margin:0}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;margin:0}
 .c{max-width:1160px;margin:0 auto;padding:0 20px}
-.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:600;color:var(--ac)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font:600 15px Inter,sans-serif;transition:background .2s,transform .2s}
-.btn:hover{background:var(--ac2);transform:translateY(-2px)}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.7)}.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:500;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;padding:14px 26px;border-radius:2px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font:500 14px Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:var(--ac2)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.6)}.btn.ghost:hover{background:rgba(255,255,255,.12)}
 /* header */
 header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,box-shadow .3s}
 header.solid{background:rgba(246,241,234,.95);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--bd)}
@@ -26,53 +26,53 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .menu{display:flex;gap:30px;list-style:none;margin:0;padding:0}
 .menu a{color:#fff;text-decoration:none;font-weight:500;transition:color .3s}
 header.solid .logo,header.solid .menu a{color:var(--fg)}.menu a:hover{color:var(--ac)!important}
-#tg{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}header.solid #tg{color:var(--fg)}
+#tg{display:none;background:none;border:1px solid currentColor;color:#fff;font:500 12px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;cursor:pointer}header.solid #tg{color:var(--fg)}
 /* hero */
 .hero{min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(180deg,rgba(15,10,6,.35),rgba(15,10,6,.8)),url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1800&q=75") center/cover}
 .hero .c{padding-bottom:12vh;width:100%}
-.hero h1{font-size:clamp(42px,7vw,88px);max-width:12ch;margin:14px 0 20px}
+.hero h1{font-weight:500;font-size:clamp(40px,6vw,76px);max-width:14ch;margin:14px 0 20px}
 .hero p{font-size:19px;max-width:46ch;color:#efe6dc;margin:0 0 34px}
-.hero .eyebrow{color:#f0b48d}.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .eyebrow{color:#cfc4b8}.cta{display:flex;gap:14px;flex-wrap:wrap}
 .stats{display:flex;gap:48px;margin-top:56px;flex-wrap:wrap}.stats b{font:700 30px Fraunces,serif;display:block}.stats span{color:#d9cdc1;font-size:14px}
 section{padding:110px 0}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
 .head h2{font-size:clamp(32px,4.4vw,52px);margin-top:10px}
 /* menu tabs */
-.tabs{display:flex;gap:8px;background:var(--card);border:1px solid var(--bd);padding:6px;border-radius:999px}
-.tabs button{border:0;background:none;padding:10px 20px;border-radius:999px;font:600 14px Inter,sans-serif;color:var(--mut);cursor:pointer;transition:.2s}
+.tabs{display:flex;gap:8px;background:var(--card);border:1px solid var(--bd);padding:0;border-radius:0;gap:0}
+.tabs button{border:0;background:none;padding:12px 22px;border-radius:0;letter-spacing:.06em;text-transform:uppercase;font-size:12px!important;font:600 14px Inter,sans-serif;color:var(--mut);cursor:pointer;transition:.2s}
 .tabs button[aria-selected=true]{background:var(--fg);color:#fff}
 .items{display:grid;grid-template-columns:1fr 1fr;gap:6px 56px}
-.item{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px dashed var(--bd);animation:fade .4s both}
+.item{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--bd)}
 .item h3{font-size:20px}.item p{margin:2px 0 0;color:var(--mut);font-size:14px}
-.item .dots{flex:1}.item .pr{font:700 18px Fraunces,serif;color:var(--ac)}
+.item .dots{flex:1}.item .pr{font:500 16px Inter,sans-serif;color:var(--fg)}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}}
 /* story */
 .story{background:var(--dark);color:#efe6dc}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.split img{border-radius:20px;aspect-ratio:4/5;object-fit:cover}
+.split img{border-radius:0;filter:grayscale(.35);aspect-ratio:4/5;object-fit:cover}
 .story h2{color:#fff;font-size:clamp(32px,4vw,48px);margin:10px 0 22px}
 .feats{display:grid;gap:22px;margin-top:34px}
-.feat{display:flex;gap:16px}.feat i{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(194,96,46,.18);display:grid;place-items:center;font-style:normal;font-size:20px}
+.feat{display:flex;gap:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}.feat i{flex:none;font:500 13px Inter,sans-serif;font-style:normal;color:#a99a8c;letter-spacing:.1em;padding-top:2px}
 .feat h3{font:600 17px Inter,sans-serif;color:#fff}.feat p{margin:2px 0 0;color:#b8aa9c;font-size:15px}
 /* gallery */
 .gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
-.gal img{width:100%;height:100%;object-fit:cover;border-radius:16px;transition:transform .5s}
-.gal div{overflow:hidden;border-radius:16px}.gal div:hover img{transform:scale(1.06)}
+.gal img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35);transition:filter .4s}
+.gal div{overflow:hidden}.gal div:hover img{filter:none}
 .gal div:first-child{grid-row:span 2}
 /* booking */
-.book{background:var(--card);border:1px solid var(--bd);border-radius:24px;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
-.info{padding:52px;background:linear-gradient(160deg,var(--ac),var(--ac2));color:#fff}
-.info h2{font-size:40px;margin:10px 0 18px}.info .eyebrow{color:#ffd9c2}
+.book{background:var(--card);border:1px solid var(--bd);border-radius:0;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
+.info{padding:52px;background:var(--dark);color:#efe6dc}
+.info h2{font-size:40px;margin:10px 0 18px}.info .eyebrow{color:#a99a8c}
 .hours{list-style:none;padding:0;margin:28px 0 0}.hours li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.25)}
 form{padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .f{display:grid;gap:6px}.f.full{grid-column:1/-1}
 label{font-weight:600;font-size:13px}
-input,select{width:100%;padding:13px 14px;border:1px solid var(--bd);border-radius:12px;font:inherit;background:#fff;color:var(--fg)}
+input,select{width:100%;padding:13px 14px;border:1px solid var(--bd);border-radius:0;font:inherit;background:#fff;color:var(--fg)}
 input:focus,select:focus{outline:2px solid var(--ac);border-color:transparent}
 .err{color:#b3261e;font-size:12px;min-height:1em}
-#ok{grid-column:1/-1;margin:0;padding:14px;border-radius:12px;background:#e6f2ea;color:#1f5a35;font-weight:600;display:none}
+#ok{grid-column:1/-1;margin:0;padding:14px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);font-weight:600;display:none}
 footer{padding:44px 0;color:var(--mut);font-size:14px;border-top:1px solid var(--bd)}
-footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--fg)!important}footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 @media (max-width:900px){
@@ -91,7 +91,7 @@ footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <body>
 <header id="hd"><nav class="c">
  <a class="logo" href="#top">Northbean</a>
- <button id="tg" aria-label="Open menu" aria-expanded="false">☰</button>
+ <button id="tg" aria-label="Open menu" aria-expanded="false">Menu</button>
  <ul class="menu" id="menu">
   <li><a href="#menu-s">Menu</a></li><li><a href="#story">Our story</a></li>
   <li><a href="#gallery">Gallery</a></li><li><a href="#visit">Visit</a></li>
@@ -103,7 +103,7 @@ footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  <span class="eyebrow">Specialty coffee · Bakery · Since 2019</span>
  <h1>Slow mornings, great coffee.</h1>
  <p>Seasonal beans roasted in-house every Monday, pastries out of the oven by 7 am, and a quiet corner waiting for you.</p>
- <div class="cta"><a class="btn" href="#visit">Book a table →</a><a class="btn ghost" href="#menu-s">See the menu</a></div>
+ <div class="cta"><a class="btn" href="#visit">Book a table</a><a class="btn ghost" href="#menu-s">See the menu</a></div>
  <div class="stats"><div><b>12</b><span>single-origin coffees</span></div><div><b>7 am</b><span>fresh pastries daily</span></div><div><b>40</b><span>seats & free Wi-Fi</span></div></div>
 </div></div>
 
@@ -119,9 +119,9 @@ footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <h2>A small roastery with a big counter.</h2>
   <p>We roast in small batches in the back room and serve it at the front. Every bean is traceable to the farm, and every cup is weighed and timed.</p>
   <div class="feats">
-   <div class="feat"><i>☕</i><div><h3>Roasted weekly</h3><p>Never older than seven days when it hits your cup.</p></div></div>
-   <div class="feat"><i>🥐</i><div><h3>Baked in-house</h3><p>Butter croissants and cardamom buns every morning.</p></div></div>
-   <div class="feat"><i>💻</i><div><h3>Work-friendly</h3><p>Power at every table, fast Wi-Fi, quiet zone upstairs.</p></div></div>
+   <div class="feat"><i>01</i><div><h3>Roasted weekly</h3><p>Never older than seven days when it hits your cup.</p></div></div>
+   <div class="feat"><i>02</i><div><h3>Baked in-house</h3><p>Butter croissants and cardamom buns every morning.</p></div></div>
+   <div class="feat"><i>03</i><div><h3>Work-friendly</h3><p>Power at every table, fast Wi-Fi, quiet zone upstairs.</p></div></div>
   </div></div>
 </div></section>
 
@@ -160,7 +160,7 @@ Bakery:[["Butter croissant","Laminated for three days","$3.20"],["Cardamom bun",
 Breakfast:[["Avocado toast","Sourdough, chili, lime","$8.50"],["Granola bowl","Yoghurt, honey, berries","$7.00"],["Egg sandwich","Brioche, cheddar, relish","$7.80"],["Shakshuka","Baked eggs, feta, bread","$9.50"]]};
 const tabs=document.getElementById('tabs'),items=document.getElementById('items');
 function show(k){tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.textContent===k));
- items.innerHTML=MENU[k].map((m,i)=>`<div class="item" style="animation-delay:${i*50}ms"><div><h3>${m[0]}</h3><p>${m[1]}</p></div><span class="dots"></span><span class="pr">${m[2]}</span></div>`).join('')}
+ items.innerHTML=MENU[k].map((m,i)=>`<div class="item" ><div><h3>${m[0]}</h3><p>${m[1]}</p></div><span class="dots"></span><span class="pr">${m[2]}</span></div>`).join('')}
 Object.keys(MENU).forEach(k=>{const b=document.createElement('button');b.role='tab';b.textContent=k;b.onclick=()=>show(k);tabs.append(b)});show('Coffee');
 const hd=document.getElementById('hd'),onS=()=>hd.classList.toggle('solid',scrollY>40);addEventListener('scroll',onS,{passive:true});onS();
 const tg=document.getElementById('tg'),menu=document.getElementById('menu');
